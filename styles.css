@@ -4,7 +4,6 @@
   --sand: #efe6d6;
   --mist: #b9c7bc;
   --amber: #c9a15b;
-  --bark: #2a2218;
   --ease: cubic-bezier(0.22, 1, 0.36, 1);
 }
 
@@ -22,7 +21,7 @@ body {
   font-family: "Noto Sans SC", "PingFang SC", "Hiragino Sans GB", sans-serif;
   color: var(--sand);
   background: var(--ink);
-  line-height: 1.7;
+  line-height: 1.65;
   overflow-x: hidden;
 }
 
@@ -38,18 +37,17 @@ img {
   inset: 0;
   pointer-events: none;
   z-index: 40;
-  opacity: 0.045;
+  opacity: 0.04;
   background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
 }
 
-/* —— Hero: one composition, full-bleed —— */
+/* Hero: full-bleed photo + brand mid-frame (no empty lower strip) */
 .hero {
   position: relative;
   min-height: 100svh;
   display: flex;
-  align-items: flex-end;
-  padding: clamp(1.75rem, 5vw, 3.5rem);
-  padding-bottom: clamp(3rem, 12vh, 5.5rem);
+  align-items: center;
+  padding: clamp(1.5rem, 5vw, 3rem);
   isolation: isolate;
 }
 
@@ -61,13 +59,14 @@ img {
 }
 
 .hero-img {
-  transform: scale(1.08);
-  animation: hero-drift 22s var(--ease) infinite alternate;
+  object-position: center 35%;
+  transform: scale(1.06);
+  animation: hero-drift 24s var(--ease) infinite alternate;
 }
 
 @keyframes hero-drift {
-  from { transform: scale(1.08) translate3d(0, 0, 0); }
-  to { transform: scale(1.14) translate3d(-1.5%, -1%, 0); }
+  from { transform: scale(1.06) translate3d(0, 0, 0); }
+  to { transform: scale(1.12) translate3d(-1.2%, -0.8%, 0); }
 }
 
 .hero-veil {
@@ -75,47 +74,47 @@ img {
   inset: 0;
   z-index: 1;
   background:
-    linear-gradient(to top, rgba(13, 21, 18, 0.92) 0%, rgba(13, 21, 18, 0.45) 42%, rgba(13, 21, 18, 0.15) 70%, transparent 100%),
-    linear-gradient(120deg, rgba(26, 46, 38, 0.35), transparent 50%);
+    linear-gradient(105deg, rgba(13, 21, 18, 0.78) 0%, rgba(13, 21, 18, 0.42) 42%, rgba(13, 21, 18, 0.2) 70%, rgba(13, 21, 18, 0.35) 100%),
+    linear-gradient(to top, rgba(13, 21, 18, 0.55) 0%, transparent 45%);
 }
 
 .hero-copy {
   position: relative;
   z-index: 2;
-  max-width: 28rem;
+  max-width: 26rem;
 }
 
 .brand {
   font-family: "ZCOOL XiaoWei", "Songti SC", serif;
-  font-size: clamp(3.6rem, 15vw, 7rem);
+  font-size: clamp(3.8rem, 14vw, 6.5rem);
   font-weight: 400;
   letter-spacing: 0.1em;
-  line-height: 1;
+  line-height: 0.98;
   color: var(--sand);
-  text-shadow: 0 2px 40px rgba(0, 0, 0, 0.35);
-  animation: brand-in 1.1s var(--ease) both;
+  text-shadow: 0 2px 36px rgba(0, 0, 0, 0.4);
+  animation: brand-in 1s var(--ease) both;
 }
 
 .lede {
-  margin-top: 1.1rem;
-  font-size: clamp(1.05rem, 2.4vw, 1.25rem);
+  margin-top: 0.85rem;
+  font-size: clamp(1.05rem, 2.2vw, 1.2rem);
   color: var(--mist);
   font-weight: 400;
-  animation: brand-in 1.1s var(--ease) 0.12s both;
+  animation: brand-in 1s var(--ease) 0.1s both;
 }
 
 .cta {
   display: inline-block;
-  margin-top: 1.75rem;
-  padding: 0.9rem 1.5rem;
+  margin-top: 1.4rem;
+  padding: 0.85rem 1.4rem;
   background: var(--amber);
   color: var(--ink);
   text-decoration: none;
   font-weight: 500;
-  font-size: 0.95rem;
+  font-size: 0.92rem;
   letter-spacing: 0.04em;
   transition: transform 0.2s var(--ease), background 0.2s;
-  animation: brand-in 1.1s var(--ease) 0.22s both;
+  animation: brand-in 1s var(--ease) 0.18s both;
 }
 
 .cta:hover {
@@ -130,7 +129,7 @@ img {
 @keyframes brand-in {
   from {
     opacity: 0;
-    transform: translateY(18px);
+    transform: translateY(14px);
   }
   to {
     opacity: 1;
@@ -138,11 +137,11 @@ img {
   }
 }
 
-/* —— Chapters: photo + text, not cards —— */
+/* Chapters */
 .chapter {
   display: grid;
-  grid-template-columns: 1.15fr 0.85fr;
-  min-height: min(88vh, 52rem);
+  grid-template-columns: 1.1fr 0.9fr;
+  min-height: min(72vh, 40rem);
   background: var(--ink);
 }
 
@@ -156,23 +155,23 @@ img {
 
 .chapter-visual {
   position: relative;
-  min-height: 22rem;
+  min-height: 18rem;
   overflow: hidden;
 }
 
 .chapter-visual img {
-  transition: transform 1.4s var(--ease);
+  transition: transform 1.3s var(--ease);
 }
 
 .chapter.reveal.is-in .chapter-visual img {
-  transform: scale(1.04);
+  transform: scale(1.03);
 }
 
 .chapter-text {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: clamp(2rem, 6vw, 4.5rem);
+  padding: clamp(1.75rem, 5vw, 3.25rem);
   background:
     radial-gradient(ellipse 80% 60% at 0% 50%, rgba(42, 74, 60, 0.35), transparent 60%),
     var(--moss);
@@ -218,30 +217,30 @@ img {
 
 .idx {
   font-family: "ZCOOL XiaoWei", serif;
-  font-size: 2rem;
+  font-size: 1.75rem;
   color: var(--amber);
   line-height: 1;
-  margin-bottom: 0.75rem;
+  margin-bottom: 0.55rem;
 }
 
 .chapter-text h2 {
   font-family: "ZCOOL XiaoWei", serif;
-  font-size: clamp(2rem, 4.5vw, 3rem);
+  font-size: clamp(1.85rem, 4vw, 2.6rem);
   font-weight: 400;
   letter-spacing: 0.06em;
-  margin-bottom: 1rem;
+  margin-bottom: 0.75rem;
 }
 
 .chapter-text p:not(.idx) {
   color: var(--mist);
   max-width: 22rem;
-  font-size: 1.02rem;
+  font-size: 1rem;
 }
 
 .reveal {
   opacity: 0;
-  transform: translateY(28px);
-  transition: opacity 0.9s var(--ease), transform 0.9s var(--ease);
+  transform: translateY(22px);
+  transition: opacity 0.85s var(--ease), transform 0.85s var(--ease);
 }
 
 .reveal.is-in {
@@ -249,84 +248,41 @@ img {
   transform: translateY(0);
 }
 
-/* —— ESP demo panel (interactive → panel ok) —— */
 .esp-lab {
-  padding: clamp(3.5rem, 10vw, 6rem) clamp(1.5rem, 5vw, 3.5rem);
-  max-width: 40rem;
+  padding: clamp(2.75rem, 8vw, 4.5rem) clamp(1.35rem, 5vw, 3rem);
+  max-width: 36rem;
   margin: 0 auto;
-  text-align: left;
 }
 
 .esp-lab h2 {
   font-family: "ZCOOL XiaoWei", serif;
-  font-size: clamp(1.9rem, 4vw, 2.5rem);
+  font-size: clamp(1.7rem, 3.5vw, 2.2rem);
   font-weight: 400;
-  margin-bottom: 0.6rem;
+  margin-bottom: 0.5rem;
 }
 
 .esp-lead {
   color: var(--mist);
-  margin-bottom: 1.75rem;
+  margin-bottom: 1.25rem;
+  font-size: 0.98rem;
 }
 
 .esp-panel {
-  padding: 1.5rem;
-  background: rgba(20, 32, 26, 0.85);
-  border: 1px solid rgba(197, 212, 203, 0.14);
+  padding: 1.25rem 1.35rem;
+  background: rgba(20, 32, 26, 0.9);
+  border: 1px solid rgba(197, 212, 203, 0.12);
 }
 
 .esp-status {
   font-size: 0.9rem;
-  color: var(--mist);
-  min-height: 1.4em;
-  margin-bottom: 1rem;
-}
-
-.esp-row {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.65rem;
-}
-
-.esp-btn {
-  appearance: none;
-  border: 1px solid transparent;
-  cursor: pointer;
-  font-family: inherit;
-  font-size: 0.95rem;
-  font-weight: 500;
-  padding: 0.85rem 1.35rem;
-  transition: background 0.2s, color 0.2s, border-color 0.2s, transform 0.15s;
-}
-
-.esp-btn:active {
-  transform: scale(0.98);
-}
-
-.esp-primary {
-  background: var(--amber);
-  color: var(--ink);
-}
-
-.esp-primary:hover {
-  background: #d9b36a;
-}
-
-.esp-ghost {
-  background: transparent;
-  color: #e8a090;
-  border-color: rgba(232, 160, 144, 0.4);
-}
-
-.esp-ghost:disabled {
-  opacity: 0.45;
-  cursor: not-allowed;
+  color: var(--sand);
+  margin-bottom: 0.55rem;
 }
 
 .esp-hint {
-  margin-top: 1.15rem;
-  font-size: 0.82rem;
-  color: rgba(185, 199, 188, 0.7);
+  font-size: 0.8rem;
+  color: rgba(185, 199, 188, 0.72);
+  line-height: 1.55;
 }
 
 .esp-hint strong {
@@ -335,15 +291,15 @@ img {
 }
 
 .site-foot {
-  padding: 2.5rem clamp(1.5rem, 5vw, 3.5rem) 3.5rem;
+  padding: 2rem clamp(1.35rem, 5vw, 3rem) 2.75rem;
   text-align: center;
-  color: rgba(185, 199, 188, 0.55);
-  font-size: 0.82rem;
+  color: rgba(185, 199, 188, 0.5);
+  font-size: 0.8rem;
   border-top: 1px solid rgba(197, 212, 203, 0.08);
 }
 
 .site-foot .credits {
-  margin-top: 0.4rem;
+  margin-top: 0.35rem;
 }
 
 .site-foot a {
@@ -356,6 +312,16 @@ img {
 }
 
 @media (max-width: 860px) {
+  .hero {
+    align-items: flex-end;
+    padding-bottom: clamp(2.5rem, 10vh, 4rem);
+  }
+
+  .hero-veil {
+    background:
+      linear-gradient(to top, rgba(13, 21, 18, 0.88) 0%, rgba(13, 21, 18, 0.4) 48%, rgba(13, 21, 18, 0.15) 100%);
+  }
+
   .chapter,
   .chapter-flip {
     grid-template-columns: 1fr;
@@ -364,8 +330,12 @@ img {
   }
 
   .chapter-visual {
-    min-height: 55vw;
-    max-height: 22rem;
+    min-height: 48vw;
+    max-height: 18rem;
+  }
+
+  .chapter-text {
+    padding: 1.5rem 1.25rem 1.85rem;
   }
 }
 
