@@ -3,44 +3,75 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>致谢 · 7鸣匣</title>
+  <title>展览说明 · 7鸣匣</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500&family=ZCOOL+XiaoWei&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="styles.css" />
   <style>
     .credits-page {
       max-width: 40rem;
       margin: 0 auto;
-      padding: clamp(2.5rem, 8vw, 5rem) clamp(1.5rem, 5vw, 3rem);
+      padding: clamp(2.5rem, 8vw, 5rem) clamp(1.5rem, 5vw, 3rem) 4rem;
     }
     .credits-page h1 {
       font-family: "ZCOOL XiaoWei", "Songti SC", serif;
       font-size: 2.2rem;
       font-weight: 400;
-      margin-bottom: 1rem;
+      letter-spacing: 0.06em;
+      margin: 1.2rem 0 0.4rem;
     }
-    .credits-page a { color: var(--amber); }
-    .credits-page ul {
-      margin: 1.25rem 0 2rem;
-      padding-left: 1.2rem;
+    .credits-page h2 {
+      font-family: "ZCOOL XiaoWei", "Songti SC", serif;
+      font-size: 1.35rem;
+      font-weight: 400;
+      margin: 1.8rem 0 0.55rem;
+    }
+    .credits-page p,
+    .credits-page li {
       color: var(--mist);
     }
-    .credits-page li { margin: 0.55rem 0; }
+    .credits-page p + p {
+      margin-top: 0.75rem;
+    }
+    .credits-page ul {
+      margin: 0.6rem 0 0;
+      padding-left: 1.15rem;
+    }
+    .credits-page li { margin: 0.45rem 0; }
+    .credits-page a { color: var(--amber); }
     .back { color: var(--sand); text-decoration: none; border-bottom: 1px solid var(--amber); }
+    .kicker {
+      margin-top: 1.4rem;
+      letter-spacing: 0.18em;
+      font-size: 0.78rem;
+      color: var(--amber);
+    }
   </style>
 </head>
 <body>
   <main class="credits-page">
     <p><a class="back" href="index.html">← 返回 7鸣匣</a></p>
-    <h1>照片致谢</h1>
-    <p style="color:var(--mist)">下列图片来自 Wikimedia Commons，遵循各自 CC 许可；部署本站时请保留署名。</p>
+    <p class="kicker">标本大赛展品</p>
+    <h1>展览说明</h1>
+    <p>七鸣匣是一件可看、可听、可动的昆虫科普展品。匣中陈列东北夏季林下常见的七种发声昆虫，按它们出声的时辰分成昼夜。</p>
+    <p>白天：蝉、蝗虫、天牛、蝈螽。夜里：蟋蟀、蝼蛄、纺织娘。灯亮起的是正在叫的那一只；天牛、蝗虫和纺织娘还会随叫声轻轻动一下。</p>
+
+    <h2>照片</h2>
+    <p>页面上的七张照片与匣中标本一一对应，用来对照外形：树冠上的蝉、草地里的蝗虫、树干上的天牛、灌丛里的蝈螽，以及夜里的蟋蟀、蝼蛄和纺织娘。</p>
+
+    <h2>鸣声依据</h2>
     <ul>
-      <li>蝉 / 英雄图：Katja Schulz 等 — Periodical / Dog-day Cicada 相关作品（CC BY）</li>
-      <li>蟋蟀：Naveen Mathew — <em>Cricket Insect.jpg</em></li>
-      <li>蝼蛄：Tobias b köhler — <em>Gryllotalpa gryllotalpa</em></li>
-      <li>螽斯：Wikimedia — <em>Tettigonia viridissima</em> 相关</li>
-      <li>天牛：Asian long-horned beetle 相关（Commons）</li>
-      <li>蝗虫：<em>Schistocerca gregaria</em>（Commons）</li>
+      <li>蝉科：雄虫以腹部鼓膜发声，不是翅膀摩擦。</li>
+      <li>蝗科：多以后足腿节内侧的音齿摩擦前翅；部分种类飞翔时后翅拍击。</li>
+      <li>天牛科：前胸背板后缘摩擦中胸背板上的音锉，声音短而干。</li>
+      <li>蟋蟀、蝈螽、纺织娘、蝼蛄：雄虫以前翅音锉与刮器摩擦。</li>
+      <li>蝈螽采用北方昼鸣种类。吴山等，2009，《动物分类学报》比较了优雅蝈螽与暗褐蝈螽的雄性鸣声和发声器，二者结构不同，主频也不同。</li>
+      <li>纺织娘学名 <em>Mecopoda elongata</em>，鸣声像摇纺车，故名。古称络纬、莎鸡。与白天的蝈螽同属螽斯科，出声时辰相反。</li>
     </ul>
-    <p style="color:var(--mist);font-size:0.9rem">详细许可以各文件页面为准：<a href="https://commons.wikimedia.org/">commons.wikimedia.org</a></p>
+
+    <h2>怎么听</h2>
+    <p>在展柜旁用安卓手机或电脑打开本页，滑到最下方「听这一只」，点名字即可。有人正在听时，后来的会自动排上。苹果手机自带浏览器不能连接，可改用展柜热点 <strong>7MingXia</strong>。</p>
   </main>
 </body>
 </html>

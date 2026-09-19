@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="7鸣匣 — 东北夏季林下七种发声昆虫，按昼夜习性认识它们怎么叫、住在哪里。" />
+  <meta name="description" content="7鸣匣 — 白天蝉、蝗虫、天牛、蝈螽，夜里蟋蟀、蝼蛄、纺织娘。按发声方式和栖境认识七种昆虫。" />
   <title>7鸣匣</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -19,137 +19,209 @@
     </div>
     <div class="hero-veil" aria-hidden="true"></div>
     <div class="hero-copy">
+      <p class="eyebrow">东北夏季 · 七种发声昆虫</p>
       <h1 class="brand">7鸣匣</h1>
       <p class="lede">儿时听惯的虫鸣，长大后成了生疏的梦。</p>
-      <a class="cta" href="#gallery">认识七鸣</a>
+      <div class="cta-row">
+        <a class="cta" href="#day">白天四鸣</a>
+        <a class="cta cta-ghost" href="#night">夜里三鸣</a>
+      </div>
     </div>
   </header>
 
   <main id="gallery">
     <section class="preface reveal">
-      <p>儿时夏夜，虫鸣自己会从树冠、草丛和土埂里涌来；长大后，那些声音常常只剩在记忆里一闪。七鸣匣收的是东北夏季林下常见的部分发声昆虫，按自然习性分成昼夜：白天是蝉、天牛、蝗虫、蝈螽，夜里是纺织娘、蝼蛄、蟋蟀。</p>
+      <p>儿时夏夜，虫鸣自己会从树冠、草丛和土埂里涌来；长大后，那些声音常常只剩在记忆里一闪。七鸣匣把这些声音收回一只匣子：灯标出是哪一只，叫声按各自的发声方式播放。天牛、蝗虫和纺织娘还会轻轻动一下。</p>
+      <p>顺序跟它们出声的时辰走。白天先蝉，再蝗虫、天牛、蝈螽；夜里先蟋蟀，再蝼蛄、纺织娘。</p>
     </section>
 
-    <section class="chapter reveal" data-tone="warm">
-      <figure class="chapter-visual">
-        <img src="images/cicada.jpg" alt="蝉" loading="lazy" width="1600" height="1200" />
-      </figure>
-      <div class="chapter-text">
-        <p class="idx">01 · 昼</p>
-        <h2>蝉</h2>
-        <p class="taxon">半翅目 · 蝉科</p>
-        <p>雄蝉靠腹部鼓膜高频振动发声，不是翅膀摩擦。多栖在乔木树冠，把正午的林子变成一整片声场。</p>
-      </div>
-    </section>
+    <div class="band band-day" id="day">
+      <header class="band-head reveal">
+        <p class="band-kicker">白昼</p>
+        <h2>从树冠到草地</h2>
+        <p>正午最响的在枝头。草地和树干上，另外三只用不一样的办法出声。</p>
+      </header>
 
-    <section class="chapter chapter-flip reveal" data-tone="cool">
-      <figure class="chapter-visual">
-        <img src="images/cricket.jpg" alt="蟋蟀" loading="lazy" width="1600" height="1200" />
-      </figure>
-      <div class="chapter-text">
-        <p class="idx">02 · 夜</p>
-        <h2>蟋蟀</h2>
-        <p class="taxon">直翅目 · 蟋蟀科</p>
-        <p>前翅互相摩擦起振。体色偏暗，夜里待在灌丛和离人近的地方，细声却传得很远。</p>
-      </div>
-    </section>
+      <section class="chapter reveal">
+        <figure class="chapter-visual">
+          <img src="images/cicada.jpg" alt="蝉" width="1600" height="1200" />
+        </figure>
+        <div class="chapter-text">
+          <p class="idx">01</p>
+          <h2>蝉</h2>
+          <p class="taxon">半翅目 · 蝉科</p>
+          <p class="latin">北方林中常见黑蚱蝉 <em>Cryptotympana atrata</em> 一类</p>
+          <dl class="facts">
+            <div><dt>怎么叫</dt><dd>只有雄蝉会鸣。腹部两侧的鼓膜肌拉动鼓膜，气室把声音放大。这不是翅膀摩擦。</dd></div>
+            <div><dt>住在哪</dt><dd>乔木树冠。盛夏高温的正午最响，能把一整片林子盖住。</dd></div>
+          </dl>
+        </div>
+      </section>
 
-    <section class="chapter reveal" data-tone="earth">
-      <figure class="chapter-visual">
-        <img src="images/mole.jpg" alt="蝼蛄" loading="lazy" width="1600" height="1200" />
-      </figure>
-      <div class="chapter-text">
-        <p class="idx">03 · 夜</p>
-        <h2>蝼蛄</h2>
-        <p class="taxon">直翅目 · 蝼蛄科</p>
-        <p>前足特化成开掘足，平时住在土洞里。洞口像一只小喇叭，把低而绵长的鸣声送出地面。</p>
-      </div>
-    </section>
+      <section class="chapter chapter-flip reveal">
+        <figure class="chapter-visual">
+          <img src="images/locust.jpg" alt="蝗虫" loading="lazy" width="1600" height="1200" />
+        </figure>
+        <div class="chapter-text">
+          <p class="idx">02</p>
+          <h2>蝗虫</h2>
+          <p class="taxon">直翅目 · 蝗科</p>
+          <p class="latin">后足善跳，白天在草地和田边活动</p>
+          <dl class="facts">
+            <div><dt>怎么叫</dt><dd>许多雄蝗用后足腿节内侧的音齿去蹭前翅。有的种类飞翔时后翅互相拍击，发出断续的“沙沙”声。</dd></div>
+            <div><dt>住在哪</dt><dd>田间、路旁、林缘草地。天天能遇见，却很少被人停下来听。</dd></div>
+          </dl>
+        </div>
+      </section>
 
-    <section class="chapter chapter-flip reveal" data-tone="leaf">
-      <figure class="chapter-visual">
-        <img src="images/katydid.jpg" alt="蝈螽" loading="lazy" width="1600" height="1200" />
-      </figure>
-      <div class="chapter-text">
-        <p class="idx">04 · 昼</p>
-        <h2>蝈螽</h2>
-        <p class="taxon">直翅目 · 螽斯科</p>
-        <p>触角细长如丝。白天在草丛里活动，左右翅脉摩擦，发出清越的颤音。</p>
-      </div>
-    </section>
+      <section class="chapter reveal">
+        <figure class="chapter-visual">
+          <img src="images/longhorn.jpg" alt="天牛" loading="lazy" width="1600" height="1200" />
+        </figure>
+        <div class="chapter-text">
+          <p class="idx">03</p>
+          <h2>天牛</h2>
+          <p class="taxon">鞘翅目 · 天牛科</p>
+          <p class="latin">触角常超过体长，白天停在树干和枝条上</p>
+          <dl class="facts">
+            <div><dt>怎么叫</dt><dd>成虫用前胸背板后缘去摩擦中胸背板上的音锉。声音短、干、涩，像木纤维被轻轻搓开。受惊时尤其明显。</dd></div>
+            <div><dt>住在哪</dt><dd>幼虫蛀食木质部，成虫在树皮和枝条间爬行。匣里这一只还会随叫声轻轻摆动。</dd></div>
+          </dl>
+        </div>
+      </section>
 
-    <section class="chapter reveal night" data-tone="night">
-      <figure class="chapter-visual">
-        <img src="images/katydid_night.jpg" alt="纺织娘" loading="lazy" width="1600" height="1200" />
-      </figure>
-      <div class="chapter-text">
-        <p class="idx">05 · 夜</p>
-        <h2>纺织娘</h2>
-        <p class="taxon">直翅目 · 螽斯科</p>
-        <p>同是螽斯一类，入夜后叫声更响、节律也变了。匣里因此给了它夜里的姿态。</p>
-      </div>
-    </section>
+      <section class="chapter chapter-flip reveal">
+        <figure class="chapter-visual">
+          <img src="images/katydid.jpg" alt="蝈螽" loading="lazy" width="1600" height="1200" />
+        </figure>
+        <div class="chapter-text">
+          <p class="idx">04</p>
+          <h2>蝈螽</h2>
+          <p class="taxon">直翅目 · 螽斯科</p>
+          <p class="latin">优雅蝈螽 <em>Gampsocleis gratiosa</em>、暗褐蝈螽 <em>G. sedakovii</em></p>
+          <dl class="facts">
+            <div><dt>怎么叫</dt><dd>雄虫左前翅的发声锉摩擦右翅。北方这两种都是昼鸣，鸣声清而颤。优雅蝈螽的主频大约在 7 千赫一带。</dd></div>
+            <div><dt>住在哪</dt><dd>灌丛和高草。触角细得像丝。它和夜里的纺织娘同科，出声的时辰正好相反。</dd></div>
+          </dl>
+        </div>
+      </section>
+    </div>
 
-    <section class="chapter chapter-flip reveal" data-tone="bark">
-      <figure class="chapter-visual">
-        <img src="images/longhorn.jpg" alt="天牛" loading="lazy" width="1600" height="1200" />
-      </figure>
-      <div class="chapter-text">
-        <p class="idx">06 · 昼</p>
-        <h2>天牛</h2>
-        <p class="taxon">鞘翅目 · 天牛科</p>
-        <p>触角修长，白天在树干和枝条上活动。它也能摩擦发声，短促、厚重，像木头被轻轻锯开。</p>
-      </div>
-    </section>
+    <div class="band band-night" id="night">
+      <header class="band-head reveal">
+        <p class="band-kicker">入夜</p>
+        <h2>草根、土洞、灌丛</h2>
+        <p>灯灭以后换一组嗓子。细的在砖缝，低的在地下，响的在瓜架和灌木上。</p>
+      </header>
 
-    <section class="chapter reveal" data-tone="field">
-      <figure class="chapter-visual">
-        <img src="images/locust.jpg" alt="蝗虫" loading="lazy" width="1600" height="1200" />
-      </figure>
-      <div class="chapter-text">
-        <p class="idx">07 · 昼</p>
-        <h2>蝗虫</h2>
-        <p class="taxon">直翅目 · 蝗科</p>
-        <p>后足善于跳跃，常见于田间草地。翅与腿弹振出声，天天能遇见，却很少被人认真听过。</p>
-      </div>
+      <section class="chapter reveal">
+        <figure class="chapter-visual">
+          <img src="images/cricket.jpg" alt="蟋蟀" loading="lazy" width="1600" height="1200" />
+        </figure>
+        <div class="chapter-text">
+          <p class="idx">05</p>
+          <h2>蟋蟀</h2>
+          <p class="taxon">直翅目 · 蟋蟀科</p>
+          <p class="latin">油葫芦一类，体色偏暗，离人很近</p>
+          <dl class="facts">
+            <div><dt>怎么叫</dt><dd>雄虫把右前翅盖在左前翅上，音锉与刮器互相摩擦。声音细，却能传得很远。</dd></div>
+            <div><dt>住在哪</dt><dd>土穴、砖缝、草根。白天多藏着，夜里才叫。</dd></div>
+          </dl>
+        </div>
+      </section>
+
+      <section class="chapter chapter-flip reveal">
+        <figure class="chapter-visual">
+          <img src="images/mole.jpg" alt="蝼蛄" loading="lazy" width="1600" height="1200" />
+        </figure>
+        <div class="chapter-text">
+          <p class="idx">06</p>
+          <h2>蝼蛄</h2>
+          <p class="taxon">直翅目 · 蝼蛄科</p>
+          <p class="latin">东方蝼蛄 <em>Gryllotalpa orientalis</em> 一类</p>
+          <dl class="facts">
+            <div><dt>怎么叫</dt><dd>雄虫在洞口振翅。洞穴像一只小喇叭，把偏低的鸣声送出地面，所以听着绵，又像从土里渗出来。</dd></div>
+            <div><dt>住在哪</dt><dd>前足特化成开掘足，平时住在土洞里。白天几乎看不见，夜里才出声。</dd></div>
+          </dl>
+        </div>
+      </section>
+
+      <section class="chapter reveal">
+        <figure class="chapter-visual">
+          <img src="images/katydid_night.jpg" alt="纺织娘" loading="lazy" width="1600" height="1200" />
+        </figure>
+        <div class="chapter-text">
+          <p class="idx">07</p>
+          <h2>纺织娘</h2>
+          <p class="taxon">直翅目 · 螽斯科 · 纺织娘属</p>
+          <p class="latin"><em>Mecopoda elongata</em> · 古称络纬、莎鸡</p>
+          <dl class="facts">
+            <div><dt>怎么叫</dt><dd>鸣声像摇纺车，名字就是这么来的。只有雄虫会叫，左右前翅相摩擦，而且多在夜里。</dd></div>
+            <div><dt>住在哪</dt><dd>灌木、豆架、瓜棚。它和白天的蝈螽同科，匣里把它们分成一昼一夜，方便对照着听。</dd></div>
+          </dl>
+        </div>
+      </section>
+    </div>
+
+    <section class="ways reveal" aria-label="四种发声">
+      <h2>同一片林子，四种发声</h2>
+      <ul>
+        <li><strong>鼓膜</strong><span>蝉。肌肉拉动腹部鼓膜，不是磨翅膀。</span></li>
+        <li><strong>前翅相摩擦</strong><span>蟋蟀、蝈螽、纺织娘、蝼蛄。音锉对上刮器。</span></li>
+        <li><strong>足与翅</strong><span>蝗虫。后足腿节蹭前翅，有的还会拍后翅。</span></li>
+        <li><strong>胸背板</strong><span>天牛。前胸后缘蹭中胸音锉，短而干。</span></li>
+      </ul>
+      <p class="src">蝈螽写的是北方昼鸣种类。吴山等，2009，《动物分类学报》比较过优雅蝈螽与暗褐蝈螽的鸣声和发声器。纺织娘学名 <em>Mecopoda elongata</em>，因鸣声像纺车得名。更多说明见 <a href="credits.html">展览说明</a>。</p>
     </section>
 
     <section class="esp-lab" id="play" aria-label="听这一只">
       <h2>听这一只</h2>
-      <p class="esp-lead">点下面的名字，匣上只亮这一只的灯，只放这一声。有人正在听时，后来的自动排上。</p>
+      <p class="esp-lead">点下面的名字，匣上只亮这一只的灯，只放这一声。有人正在听时，后来的自动排上。顺序与上面的昼夜一致。</p>
       <div class="esp-panel">
         <p class="esp-status" id="status">靠近匣子再点。空着就马上响。</p>
-        <div class="bugs" id="bugs"></div>
+        <p class="bug-label">白昼</p>
+        <div class="bugs" id="bugs-day"></div>
+        <p class="bug-label">入夜</p>
+        <div class="bugs bugs-night" id="bugs-night"></div>
         <p class="esp-hint">安卓 Chrome 或电脑 Edge，需打开蓝牙。iPhone 自带浏览器不能连。也可连热点 <strong>7MingXia</strong>。</p>
       </div>
     </section>
   </main>
 
   <footer class="site-foot">
-    <p>7鸣匣 · 盛夏声景</p>
-    <p class="credits">照片来自 Wikimedia Commons（CC 许可），见 <a href="credits.html">致谢</a>。</p>
+    <p>7鸣匣 · 标本大赛展品</p>
+    <p class="credits"><a href="credits.html">展览说明</a></p>
   </footer>
 
   <script src="app.js"></script>
   <script>
-    const TRACKS = ["蝉", "蟋蟀", "蝼蛄", "蝈螽", "纺织娘", "天牛", "蝗虫"];
+    const TRACKS = [
+      { name: "蝉", night: false },
+      { name: "蝗虫", night: false },
+      { name: "天牛", night: false },
+      { name: "蝈螽", night: false },
+      { name: "蟋蟀", night: true },
+      { name: "蝼蛄", night: true },
+      { name: "纺织娘", night: true }
+    ];
     const SVC = "7e570001-7e57-4000-8000-00805f9b34fb";
     const CMD = "7e570002-7e57-4000-8000-00805f9b34fb";
     const STATE = "7e570003-7e57-4000-8000-00805f9b34fb";
     const statusEl = document.getElementById("status");
-    const bugs = document.getElementById("bugs");
+    const dayBox = document.getElementById("bugs-day");
+    const nightBox = document.getElementById("bugs-night");
     const enc = new TextEncoder();
     const dec = new TextDecoder();
     let cmdChar = null;
 
     const setStatus = (t) => { statusEl.textContent = t; };
 
-    TRACKS.forEach((name, i) => {
+    TRACKS.forEach((tr, i) => {
       const b = document.createElement("button");
       b.type = "button";
-      b.textContent = name;
-      b.addEventListener("click", () => onPick(i, name));
-      bugs.appendChild(b);
+      b.textContent = tr.name;
+      b.addEventListener("click", () => onPick(i, tr.name));
+      (tr.night ? nightBox : dayBox).appendChild(b);
     });
 
     function onState(text) {
