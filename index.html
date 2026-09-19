@@ -3,65 +3,136 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="7鸣匣 — 东北夏季林下七种发声昆虫，按昼夜习性认识它们怎么叫、住在哪里。" />
   <title>7鸣匣</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;600&family=ZCOOL+XiaoWei&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="styles.css" />
-  <style>
-    .play-page {
-      max-width: 28rem;
-      margin: 0 auto;
-      padding: 1.75rem 1.25rem 3rem;
-    }
-    .play-page h1 {
-      font-family: "ZCOOL XiaoWei", "Songti SC", serif;
-      font-size: 2.4rem;
-      font-weight: 400;
-      letter-spacing: 0.08em;
-    }
-    .play-lead {
-      color: var(--mist);
-      margin: 0.6rem 0 1.1rem;
-    }
-    .play-status {
-      min-height: 1.4em;
-      margin-bottom: 1rem;
-      color: var(--sand);
-    }
-    .bugs {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 0.55rem;
-    }
-    .bugs button {
-      appearance: none;
-      border: 1px solid rgba(201, 161, 91, 0.45);
-      background: rgba(20, 32, 26, 0.85);
-      color: var(--sand);
-      font: inherit;
-      font-size: 1.05rem;
-      padding: 0.95rem 0.5rem;
-      cursor: pointer;
-    }
-    .bugs button:active { transform: scale(0.98); }
-    .bugs button:disabled { opacity: 0.45; }
-    .play-hint {
-      margin-top: 1.1rem;
-      font-size: 0.8rem;
-      color: rgba(185, 199, 188, 0.72);
-      line-height: 1.55;
-    }
-    .play-hint a { color: var(--amber); }
-  </style>
 </head>
 <body>
-  <main class="play-page">
-    <h1>7鸣匣</h1>
-    <p class="play-lead">点一只。灯只亮它，声音只放它。别人正在听时，你会自动排上。</p>
-    <p class="play-status" id="status">靠近匣子，点下面任意一只。</p>
-    <div class="bugs" id="bugs"></div>
-    <p class="play-hint">请用安卓 Chrome 或电脑 Edge，并打开蓝牙。iPhone 自带浏览器不能连接。也可连热点 7MingXia。<br /><a href="gallery.html">看看七种虫</a></p>
+  <div class="grain" aria-hidden="true"></div>
+
+  <header class="hero">
+    <div class="hero-media" aria-hidden="true">
+      <img src="images/hero.jpg" alt="" class="hero-img" width="1600" height="1200" />
+    </div>
+    <div class="hero-veil" aria-hidden="true"></div>
+    <div class="hero-copy">
+      <h1 class="brand">7鸣匣</h1>
+      <p class="lede">儿时听惯的虫鸣，长大后成了生疏的梦。</p>
+      <a class="cta" href="#gallery">认识七鸣</a>
+    </div>
+  </header>
+
+  <main id="gallery">
+    <section class="preface reveal">
+      <p>儿时夏夜，虫鸣自己会从树冠、草丛和土埂里涌来；长大后，那些声音常常只剩在记忆里一闪。七鸣匣收的是东北夏季林下常见的部分发声昆虫，按自然习性分成昼夜：白天是蝉、天牛、蝗虫、蝈螽，夜里是纺织娘、蝼蛄、蟋蟀。</p>
+    </section>
+
+    <section class="chapter reveal" data-tone="warm">
+      <figure class="chapter-visual">
+        <img src="images/cicada.jpg" alt="蝉" loading="lazy" width="1600" height="1200" />
+      </figure>
+      <div class="chapter-text">
+        <p class="idx">01 · 昼</p>
+        <h2>蝉</h2>
+        <p class="taxon">半翅目 · 蝉科</p>
+        <p>雄蝉靠腹部鼓膜高频振动发声，不是翅膀摩擦。多栖在乔木树冠，把正午的林子变成一整片声场。</p>
+      </div>
+    </section>
+
+    <section class="chapter chapter-flip reveal" data-tone="cool">
+      <figure class="chapter-visual">
+        <img src="images/cricket.jpg" alt="蟋蟀" loading="lazy" width="1600" height="1200" />
+      </figure>
+      <div class="chapter-text">
+        <p class="idx">02 · 夜</p>
+        <h2>蟋蟀</h2>
+        <p class="taxon">直翅目 · 蟋蟀科</p>
+        <p>前翅互相摩擦起振。体色偏暗，夜里待在灌丛和离人近的地方，细声却传得很远。</p>
+      </div>
+    </section>
+
+    <section class="chapter reveal" data-tone="earth">
+      <figure class="chapter-visual">
+        <img src="images/mole.jpg" alt="蝼蛄" loading="lazy" width="1600" height="1200" />
+      </figure>
+      <div class="chapter-text">
+        <p class="idx">03 · 夜</p>
+        <h2>蝼蛄</h2>
+        <p class="taxon">直翅目 · 蝼蛄科</p>
+        <p>前足特化成开掘足，平时住在土洞里。洞口像一只小喇叭，把低而绵长的鸣声送出地面。</p>
+      </div>
+    </section>
+
+    <section class="chapter chapter-flip reveal" data-tone="leaf">
+      <figure class="chapter-visual">
+        <img src="images/katydid.jpg" alt="蝈螽" loading="lazy" width="1600" height="1200" />
+      </figure>
+      <div class="chapter-text">
+        <p class="idx">04 · 昼</p>
+        <h2>蝈螽</h2>
+        <p class="taxon">直翅目 · 螽斯科</p>
+        <p>触角细长如丝。白天在草丛里活动，左右翅脉摩擦，发出清越的颤音。</p>
+      </div>
+    </section>
+
+    <section class="chapter reveal night" data-tone="night">
+      <figure class="chapter-visual">
+        <img src="images/katydid_night.jpg" alt="纺织娘" loading="lazy" width="1600" height="1200" />
+      </figure>
+      <div class="chapter-text">
+        <p class="idx">05 · 夜</p>
+        <h2>纺织娘</h2>
+        <p class="taxon">直翅目 · 螽斯科</p>
+        <p>同是螽斯一类，入夜后叫声更响、节律也变了。匣里因此给了它夜里的姿态。</p>
+      </div>
+    </section>
+
+    <section class="chapter chapter-flip reveal" data-tone="bark">
+      <figure class="chapter-visual">
+        <img src="images/longhorn.jpg" alt="天牛" loading="lazy" width="1600" height="1200" />
+      </figure>
+      <div class="chapter-text">
+        <p class="idx">06 · 昼</p>
+        <h2>天牛</h2>
+        <p class="taxon">鞘翅目 · 天牛科</p>
+        <p>触角修长，白天在树干和枝条上活动。它也能摩擦发声，短促、厚重，像木头被轻轻锯开。</p>
+      </div>
+    </section>
+
+    <section class="chapter reveal" data-tone="field">
+      <figure class="chapter-visual">
+        <img src="images/locust.jpg" alt="蝗虫" loading="lazy" width="1600" height="1200" />
+      </figure>
+      <div class="chapter-text">
+        <p class="idx">07 · 昼</p>
+        <h2>蝗虫</h2>
+        <p class="taxon">直翅目 · 蝗科</p>
+        <p>后足善于跳跃，常见于田间草地。翅与腿弹振出声，天天能遇见，却很少被人认真听过。</p>
+      </div>
+    </section>
+
+    <section class="esp-lab" id="play" aria-label="听这一只">
+      <h2>听这一只</h2>
+      <p class="esp-lead">点下面的名字，匣上只亮这一只的灯，只放这一声。有人正在听时，后来的自动排上。</p>
+      <div class="esp-panel">
+        <p class="esp-status" id="status">靠近匣子再点。空着就马上响。</p>
+        <div class="bugs" id="bugs"></div>
+        <p class="esp-hint">安卓 Chrome 或电脑 Edge，需打开蓝牙。iPhone 自带浏览器不能连。也可连热点 <strong>7MingXia</strong>。</p>
+      </div>
+    </section>
   </main>
+
+  <footer class="site-foot">
+    <p>7鸣匣 · 盛夏声景</p>
+    <p class="credits">照片来自 Wikimedia Commons（CC 许可），见 <a href="credits.html">致谢</a>。</p>
+  </footer>
+
+  <script src="app.js"></script>
   <script>
-    const TRACKS = ["蝉", "蟋蟀", "蝼蛄", "螽斯·昼", "螽斯·夜", "天牛", "蝗虫"];
+    const TRACKS = ["蝉", "蟋蟀", "蝼蛄", "蝈螽", "纺织娘", "天牛", "蝗虫"];
     const SVC = "7e570001-7e57-4000-8000-00805f9b34fb";
     const CMD = "7e570002-7e57-4000-8000-00805f9b34fb";
     const STATE = "7e570003-7e57-4000-8000-00805f9b34fb";
@@ -70,7 +141,6 @@
     const enc = new TextEncoder();
     const dec = new TextDecoder();
     let cmdChar = null;
-    let pending = null;
 
     const setStatus = (t) => { statusEl.textContent = t; };
 
@@ -90,10 +160,6 @@
       if (mine) setStatus("正在为你亮灯、播放。");
       else if (ahead > 0) setStatus("有人正在听。你前面还有 " + ahead + " 位，到了会自动播放。");
       else if (cmdChar) setStatus("匣子空着。再点一只即可。");
-    }
-
-    async function writeCmd(text) {
-      await cmdChar.writeValue(enc.encode(text));
     }
 
     async function connect() {
@@ -120,22 +186,17 @@
         setStatus("这个浏览器没有网页蓝牙。请用安卓 Chrome 或电脑 Edge。");
         return;
       }
-      pending = String(i);
       try {
         if (!cmdChar) {
           setStatus("请在窗口里选择 7MingXia…");
           await connect();
         }
-        await writeCmd(pending);
-        pending = null;
+        await cmdChar.writeValue(enc.encode(String(i)));
         setStatus("已点「" + name + "」。");
       } catch (e) {
         cmdChar = null;
-        if (e && e.name === "NotFoundError") {
-          setStatus("没找到匣子。请靠近一些，确认蓝牙已开。");
-        } else if (!(e && e.name === "NotFoundError")) {
-          setStatus("没有连上。再点一次。");
-        }
+        if (e && e.name === "NotFoundError") setStatus("没找到匣子。请靠近一些，确认蓝牙已开。");
+        else setStatus("没有连上。再点一次。");
       }
     }
   </script>
