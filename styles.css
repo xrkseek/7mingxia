@@ -290,6 +290,78 @@ img {
   font-weight: 500;
 }
 
+.esp-name {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  margin-bottom: 0.9rem;
+  color: var(--mist);
+  font-size: 0.9rem;
+}
+
+.esp-name input {
+  flex: 1;
+  background: transparent;
+  border: 1px solid rgba(197, 212, 203, 0.2);
+  color: var(--sand);
+  font: inherit;
+  padding: 0.55rem 0.7rem;
+}
+
+.esp-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.55rem;
+}
+
+.esp-row + .esp-row,
+.esp-tracks {
+  margin-top: 0.7rem;
+}
+
+.esp-btn {
+  appearance: none;
+  border: 1px solid transparent;
+  cursor: pointer;
+  font-family: inherit;
+  font-size: 0.9rem;
+  font-weight: 500;
+  padding: 0.7rem 1rem;
+}
+
+.esp-btn:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+.esp-primary {
+  background: var(--amber);
+  color: var(--ink);
+}
+
+.esp-ghost {
+  background: transparent;
+  color: var(--sand);
+  border-color: rgba(197, 212, 203, 0.28);
+}
+
+.esp-tracks {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+}
+
+.esp-tracks button {
+  appearance: none;
+  background: transparent;
+  border: 1px solid rgba(201, 161, 91, 0.4);
+  color: var(--amber);
+  font: inherit;
+  font-size: 0.8rem;
+  padding: 0.4rem 0.65rem;
+  cursor: pointer;
+}
+
 .site-foot {
   padding: 2rem clamp(1.35rem, 5vw, 3rem) 2.75rem;
   text-align: center;
