@@ -290,6 +290,10 @@ img {
   font-weight: 500;
 }
 
+.esp-hint a {
+  color: var(--amber);
+}
+
 .esp-name {
   display: flex;
   align-items: center;
