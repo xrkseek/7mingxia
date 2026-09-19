@@ -1,21 +1,16 @@
-# local firmware & tools (not part of Cloudflare Pages site)
-cicada-esp32s3-player/
+# firmware build output
+cicada-esp32s3-player/build/
+
+# raw sound candidates, not the published project
 cricket-sounds/
 insect-sounds-candidates/
-tools/
+
+# editor / local
 .vscode/
 .clangd
 eim_config.toml
-
-# exhibition / contest local files
 *.docx
-远景.jpg
-近景.jpg
-侧景.jpg
-侧景2.jpg
-俯视图.jpg
-
-# junk
 *.bak
+*.bak.wav
 .DS_Store
 Thumbs.db

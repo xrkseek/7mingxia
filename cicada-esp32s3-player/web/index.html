@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>7鸣匣</title>
+  <style>
+    :root {
+      --ink: #0e1713;
+      --sand: #ebe2d3;
+      --mist: #b7c6bc;
+      --amber: #d4a24c;
+      --line: rgba(183, 198, 188, 0.16);
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+      color: var(--sand);
+      background:
+        radial-gradient(ellipse 80% 45% at 15% -5%, #2a4638 0%, transparent 50%),
+        radial-gradient(ellipse 55% 35% at 100% 0%, #3a2c16 0%, transparent 42%),
+        linear-gradient(180deg, #0c1410 0%, #121c17 55%, #0e1713 100%);
+      min-height: 100vh;
+      line-height: 1.55;
+    }
+    main {
+      max-width: 36rem;
+      margin: 0 auto;
+      padding: 1.25rem 1.25rem 2.5rem;
+    }
+    .top {
+      padding: 0.35rem 0 1.15rem;
+      border-bottom: 1px solid var(--line);
+    }
+    .brand {
+      font-family: "Songti SC", "STSong", "SimSun", serif;
+      font-size: clamp(2.6rem, 12vw, 3.4rem);
+      letter-spacing: 0.1em;
+      line-height: 1.05;
+      font-weight: 400;
+      cursor: pointer;
+      user-select: none;
+    }
+    .tagline {
+      margin-top: 0.55rem;
+      color: var(--mist);
+      font-size: 0.95rem;
+      max-width: 22rem;
+    }
+    .controls {
+      margin-top: 1rem;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.55rem;
+      align-items: center;
+    }
+    .btn {
+      appearance: none;
+      border: 1px solid transparent;
+      cursor: pointer;
+      font-family: inherit;
+      font-size: 0.9rem;
+      font-weight: 500;
+      padding: 0.7rem 1.1rem;
+      transition: background .15s, border-color .15s, color .15s, transform .12s;
+    }
+    .btn:active { transform: scale(0.98); }
+    .btn-primary { background: var(--amber); color: var(--ink); }
+    .btn-primary:hover { background: #e0b45c; }
+    .btn-stop {
+      background: transparent;
+      color: #e8a090;
+      border-color: rgba(232, 160, 144, 0.4);
+    }
+    .btn-ghost {
+      background: transparent;
+      color: var(--mist);
+      border-color: var(--line);
+    }
+    .btn-ghost:hover { color: var(--sand); border-color: rgba(212, 162, 76, 0.45); }
+    .status {
+      margin-top: 0.75rem;
+      font-size: 0.82rem;
+      color: var(--mist);
+      min-height: 1.25em;
+    }
+    .hint {
+      margin-top: 0.45rem;
+      font-size: 0.75rem;
+      color: rgba(183, 198, 188, 0.62);
+    }
+    .hint strong { color: var(--sand); font-weight: 500; }
+    .section {
+      padding-top: 1.5rem;
+    }
+    .section h2 {
+      font-family: "Songti SC", "STSong", "SimSun", serif;
+      font-size: 1.45rem;
+      font-weight: 400;
+      letter-spacing: 0.04em;
+      margin-bottom: 0.35rem;
+    }
+    .lead {
+      color: var(--mist);
+      font-size: 0.88rem;
+      margin-bottom: 0.85rem;
+    }
+    .insects { border-top: 1px solid var(--line); }
+    .insect {
+      display: grid;
+      grid-template-columns: 2.4rem 1fr auto;
+      gap: 0.65rem 0.85rem;
+      align-items: center;
+      padding: 0.95rem 0;
+      border-bottom: 1px solid var(--line);
+    }
+    .idx {
+      font-family: "Songti SC", "STSong", serif;
+      font-size: 1.25rem;
+      color: var(--amber);
+      line-height: 1;
+    }
+    .insect h3 {
+      font-size: 1.02rem;
+      font-weight: 500;
+      margin-bottom: 0.2rem;
+    }
+    .insect p {
+      font-size: 0.82rem;
+      color: var(--mist);
+      line-height: 1.45;
+    }
+    .play-one {
+      padding: 0.5rem 0.75rem;
+      font-size: 0.8rem;
+      background: transparent;
+      border: 1px solid rgba(212, 162, 76, 0.4);
+      color: var(--amber);
+      white-space: nowrap;
+    }
+    .play-one:hover { background: rgba(212, 162, 76, 0.12); }
+    footer {
+      margin-top: 1.75rem;
+      padding-top: 1rem;
+      border-top: 1px solid var(--line);
+      color: rgba(183, 198, 188, 0.5);
+      font-size: 0.75rem;
+      text-align: center;
+    }
+    @media (max-width: 420px) {
+      .insect { grid-template-columns: 2rem 1fr; }
+      .insect .play-one { grid-column: 2; justify-self: start; }
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <header class="top">
+      <h1 class="brand" id="brand" title="点我听彩蛋">7鸣匣</h1>
+      <p class="tagline">白天蝉、蝗虫、天牛、蝈螽，夜里蟋蟀、蝼蛄、纺织娘。</p>
+      <div class="controls">
+        <button type="button" class="btn btn-primary" id="btn-play-all">播放全部</button>
+        <button type="button" class="btn btn-stop" id="btn-stop">停止</button>
+        <button type="button" class="btn btn-ghost" id="btn-lamp-debug">灯调试</button>
+      </div>
+      <p class="status" id="status">就绪</p>
+      <p class="hint">热点 <strong>7MingXia</strong>（无密码）· http://192.168.4.1</p>
+    </header>
+
+    <section class="section" aria-label="匣中七鸣">
+      <h2>匣中七鸣</h2>
+      <p class="lead">每段约五秒。右侧可单曲试听。</p>
+      <div class="insects" id="list"></div>
+    </section>
+  </main>
+  <footer>7鸣匣 · ESP32-S3</footer>
+  <script>
+    const TRACKS = [
+      { id: 0, name: "蝉", blurb: "白昼。树冠上的鼓膜声，不是磨翅膀。" },
+      { id: 1, name: "蝗虫", blurb: "白昼。后足蹭前翅，草地里常见。" },
+      { id: 2, name: "天牛", blurb: "白昼。胸背板摩擦，短而干。" },
+      { id: 3, name: "蝈螽", blurb: "白昼。前翅音锉，灌丛里的颤音。" },
+      { id: 4, name: "蟋蟀", blurb: "入夜。右翅压左翅，细声传得远。" },
+      { id: 5, name: "蝼蛄", blurb: "入夜。洞口把低频送出地面。" },
+      { id: 6, name: "纺织娘", blurb: "入夜。鸣声像纺车，故名。" }
+    ];
+
+    const list = document.getElementById("list");
+    const statusEl = document.getElementById("status");
+
+    function setStatus(msg) {
+      statusEl.textContent = msg;
+    }
+
+    async function api(path) {
+      try {
+        const r = await fetch(path, { method: "POST" });
+        const t = await r.text();
+        if (!r.ok) throw new Error(t || r.statusText);
+        setStatus(t || "ok");
+      } catch (e) {
+        setStatus("未连上匣子：先连热点 7MingXia");
+      }
+    }
+
+    TRACKS.forEach((tr, i) => {
+      const row = document.createElement("article");
+      row.className = "insect";
+      row.innerHTML =
+        '<div class="idx">' + String(i + 1).padStart(2, "0") + "</div>" +
+        "<div><h3>" + tr.name + "</h3><p>" + tr.blurb + "</p></div>";
+      const btn = document.createElement("button");
+      btn.type = "button";
+      btn.className = "play-one btn";
+      btn.textContent = "听";
+      btn.addEventListener("click", () => api("/api/play?track=" + tr.id));
+      row.appendChild(btn);
+      list.appendChild(row);
+    });
+
+    document.getElementById("btn-play-all").onclick = () => api("/api/play");
+    document.getElementById("btn-stop").onclick = () => api("/api/stop");
+    document.getElementById("btn-lamp-debug").onclick = () => api("/api/lamp-debug");
+    document.getElementById("brand").addEventListener("click", () => api("/api/play?egg=1"));
+  </script>
+</body>
+</html>
